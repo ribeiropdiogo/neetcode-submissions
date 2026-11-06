@@ -1,0 +1,9 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        remaining = {}
+
+        for i, n in enumerate(nums):
+            if n in remaining:
+                return [remaining[n],i]
+            r = target - n
+            remaining[r] = i
